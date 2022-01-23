@@ -9,8 +9,6 @@ h1{
   margin: 0;
   padding: 20px;
 }
-  a {
-    text-decoration: none;
   }
  #grid{
    display:grid;

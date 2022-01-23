@@ -7,23 +7,41 @@
     <link rel="stylesheet" href="style.css">
 
   </head>
+  <script>
+  function setColor(color){
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+     alist[i].style.color= color;
+     i=i+1;
+  }
+}
+
+   
+    function nightdayhandler(self) {
+      var target = document.querySelector('body');
+     if(self.value==='night'){
+      target.style.backgroundColor='black';
+      target.style.color='white';
+      self.value='day';
+     setColor('powderblue')
+    }
+
+     else{
+      target.style.backgroundColor='white';
+      target.style.color='black';
+      self.value='night';
+      setColor('blue')
+    }
+  }
+
+
+  </script>
   <body>
     <h1><a href="index.html">WEB</a></h1>
 
-     <input type="button" value="night" onclick="
-     var qbody = document.querySelector('body');
-     
-     if(this.value==='night'){
-      qbody.style.backgroundColor='black';
-      qbody.style.color='white';
-
-      this.value='day';
-    } else{
-      qbody.style.backgroundColor='white';
-      qbody.style.color='black';
-
-      this.value='night';
-    }">
+     <input type="button" value="night" onclick="nightdayhandler(this)
+    ">
 
 
 
